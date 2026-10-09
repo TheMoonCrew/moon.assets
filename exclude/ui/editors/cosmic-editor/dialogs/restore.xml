@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="520" height="340" title="Restore a Backup">
+	<vbox width="100%" height="100%">
+		<label id="restorePrompt" width="100%" text="Pick the backup that replaces the open file." />
+		<listview id="backupList" width="100%" height="100%" />
+		<hbox width="100%" horizontalAlign="right">
+			<button text="Cancel" id="dialogCancel" />
+			<spacer width="100%" />
+			<button text="Restore" id="dialogOk" disabled="true" />
+		</hbox>
+	</vbox>
+</dialog>

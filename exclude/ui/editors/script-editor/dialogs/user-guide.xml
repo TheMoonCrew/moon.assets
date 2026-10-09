@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="580" height="640" title="Lua Script Editor Guide">
+	<tabview width="100%" height="100%">
+		<box width="100%" text="Basics">
+			<label width="100%" text="Pick a script on the left or create a new one. The path at the top can be edited to save a copy, and it must end in .lua.\n\nCheck finds syntax errors and jumps to the line. Run starts the script in a sandbox, calls onCreate once and onUpdate every frame, and shows what it prints in the console. Song callbacks only work inside a song.\n\nThe editor completes Lua API names while you type three letters, and offers snippets such as onBeatHit or for. Tab accepts.\n\nThe Lua Bot on the right writes code for you. Describe what you want in English or Portuguese, for example: shake the camera every 4 beats. Insert merges the code into the callbacks your script already has, Replace starts from the generated code and Copy puts it on the clipboard. Ask it to change the last answer (change the duration to 2 seconds) or press Review script and it looks for mistakes such as unknown functions, misspelled callbacks and missing end keywords." />
+		</box>
+		<box width="100%" text="Hotkeys">
+			<tableview width="100%" height="560" contentWidth="100%">
+				<header width="100%">
+					<column id="action" text="Action" width="55%" />
+					<column id="keybind" text="Keybind" width="45%" />
+				</header>
+				<data>
+					<item action="Save" keybind="Ctrl + S" />
+					<item action="Run / stop / check syntax" keybind="F5 / F6 / F7" />
+					<item action="Undo / redo" keybind="Ctrl + Z / Ctrl + Y" />
+					<item action="Find / replace" keybind="Ctrl + F / Ctrl + H" />
+					<item action="Next / previous match" keybind="F3 / Shift + F3" />
+					<item action="Go to a line" keybind="Ctrl + G" />
+					<item action="Comment the lines" keybind="Ctrl + /" />
+					<item action="Duplicate / delete the line" keybind="Ctrl + D / Ctrl + Shift + K" />
+					<item action="Move the lines" keybind="Alt + Up / Down" />
+					<item action="Complete" keybind="Ctrl + Space, Tab accepts" />
+					<item action="Next / previous completion" keybind="Ctrl + N / Ctrl + P" />
+					<item action="Font size" keybind="Ctrl + Plus / Ctrl + Minus" />
+					<item action="Show or hide the Lua Bot" keybind="F4" />
+					<item action="Show this guide" keybind="F1" />
+					<item action="Leave" keybind="Esc (twice when unsaved)" />
+				</data>
+			</tableview>
+		</box>
+	</tabview>
+</dialog>

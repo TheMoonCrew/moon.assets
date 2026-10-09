@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menubar id="menubar" width="100%" paddingLeft="256">
+	<style>
+		.menu {
+		width: 190px;
+		}
+	</style>
+
+	<menu text="File" id="menubarMenuFile">
+		<menu-item id="menubarItemOpenSong" text="Open Song" shortcutText="Ctrl+O" />
+		<menu-separator />
+		<menu-item id="menubarItemSave" text="Save" shortcutText="Ctrl+S" />
+		<menu-item id="menubarItemExport" text="Export JSON" shortcutText="Ctrl+E" />
+		<menu-item id="menubarItemImport" text="Import JSON" shortcutText="Ctrl+I" />
+		<menu-item id="menubarItemInstall" text="Copy to Mods Folder" />
+		<menu-separator />
+		<menu-item id="menubarItemRestoreAutosave" text="Restore Autosave" />
+		<menu-item id="menubarItemLoadBackup" text="Load Older Backup" />
+		<menu-separator />
+		<menu-item id="menubarItemExit" text="Exit" shortcutText="Esc" />
+	</menu>
+
+	<menu text="Edit" width="208px;">
+		<menu-item id="menubarItemUndo" text="Undo" shortcutText="Ctrl+Z" />
+		<menu-item id="menubarItemRedo" text="Redo" shortcutText="Ctrl+Y" />
+		<menu-separator />
+		<menu-item id="menubarItemAddEvent" text="Add Event" shortcutText="A" />
+		<menu-item id="menubarItemDuplicate" text="Duplicate" shortcutText="Ctrl+D" />
+		<menu-item id="menubarItemRepeat" text="Repeat Selection..." />
+		<menu-item id="menubarItemMirror" text="Mirror to the Other Strumline" />
+		<menu-item id="menubarItemDelete" text="Delete" shortcutText="Delete" />
+		<menu-item id="menubarItemSelectAll" text="Select All" shortcutText="Ctrl+A" />
+		<menu-separator />
+		<menu-item id="menubarItemClear" text="Clear Modchart" />
+	</menu>
+
+	<menu text="View">
+		<menu-item id="menubarItemZoomIn" text="Zoom In" shortcutText="+" />
+		<menu-item id="menubarItemZoomOut" text="Zoom Out" shortcutText="-" />
+		<menu-item id="menubarItemFit" text="Fit Song" shortcutText="F" />
+		<menu-separator />
+		<menu-checkbox id="menubarItemWaveform" text="Show Waveform" selected="true" />
+		<menu-checkbox id="menubarItemBeatGrid" text="Show Beat Grid" selected="true" />
+		<menu-checkbox id="menubarItemPreviewNotes" text="Preview Notes" selected="true" />
+		<menu-checkbox id="menubarItemPreviewEffects" text="Preview Effects" selected="true" />
+	</menu>
+
+	<menu text="Playback">
+		<menu-item id="menubarItemPlayPause" text="Toggle Playback" shortcutText="Space" />
+		<menu-item id="menubarItemRestart" text="Restart" shortcutText="Home" />
+		<menu-item id="menubarItemNextEvent" text="Next Event" shortcutText="]" />
+		<menu-item id="menubarItemPreviousEvent" text="Previous Event" shortcutText="[" />
+	</menu>
+
+	<menu text="Presets" id="menubarMenuPresets" />
+
+	<menu text="Help">
+		<menu-item id="menubarItemUserGuide" text="User Guide" shortcutText="F1" />
+	</menu>
+
+	<spacer width="100%" />
+	<menu-item id="menubarItemChartEditor" text="Go to Chart Editor" />
+</menubar>

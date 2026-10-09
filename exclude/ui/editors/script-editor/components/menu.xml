@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menubar id="menubar" width="100%" paddingLeft="256">
+	<style>
+		.menu {
+		width: 210px;
+		}
+	</style>
+
+	<menu text="File" id="menubarMenuFile">
+		<menu-item id="menubarItemNew" text="New Script" />
+		<menu-item id="menubarItemReload" text="Reload Script List" />
+		<menu-separator />
+		<menu-item id="menubarItemSave" text="Save" shortcutText="Ctrl+S" />
+		<menu-separator />
+		<menu-item id="menubarItemExit" text="Exit" shortcutText="Esc" />
+	</menu>
+
+	<menu text="Edit">
+		<menu-item id="menubarItemUndo" text="Undo" shortcutText="Ctrl+Z" />
+		<menu-item id="menubarItemRedo" text="Redo" shortcutText="Ctrl+Y" />
+		<menu-separator />
+		<menu-item id="menubarItemComment" text="Toggle Comment" shortcutText="Ctrl+/" />
+		<menu-item id="menubarItemDuplicate" text="Duplicate Line" shortcutText="Ctrl+D" />
+		<menu-item id="menubarItemDeleteLine" text="Delete Line" shortcutText="Ctrl+Shift+K" />
+		<menu-item id="menubarItemMoveUp" text="Move Line Up" shortcutText="Alt+Up" />
+		<menu-item id="menubarItemMoveDown" text="Move Line Down" shortcutText="Alt+Down" />
+		<menu-separator />
+		<menu-item id="menubarItemComplete" text="Complete" shortcutText="Ctrl+Space" />
+	</menu>
+
+	<menu text="Search">
+		<menu-item id="menubarItemFind" text="Find" shortcutText="Ctrl+F" />
+		<menu-item id="menubarItemReplace" text="Replace" shortcutText="Ctrl+H" />
+		<menu-item id="menubarItemFindNext" text="Find Next" shortcutText="F3" />
+		<menu-item id="menubarItemGoto" text="Go to Line" shortcutText="Ctrl+G" />
+	</menu>
+
+	<menu text="View">
+		<menu-item id="menubarItemFontLarger" text="Larger Font" shortcutText="Ctrl++" />
+		<menu-item id="menubarItemFontSmaller" text="Smaller Font" shortcutText="Ctrl+-" />
+		<menu-separator />
+		<menu-checkbox id="menubarItemBotPanel" text="Lua Bot Panel" shortcutText="F4" selected="true" />
+		<menu-item id="menubarItemClearConsole" text="Clear Console" />
+	</menu>
+
+	<menu text="Run">
+		<menu-item id="menubarItemCheck" text="Check Syntax" shortcutText="F7" />
+		<menu-item id="menubarItemRun" text="Run" shortcutText="F5" />
+		<menu-item id="menubarItemStop" text="Stop" shortcutText="F6" />
+		<menu-separator />
+		<menu-item id="menubarItemApi" text="List the Lua API" />
+	</menu>
+
+	<menu text="Bot">
+		<menu-item id="menubarItemBotReview" text="Review My Script" />
+		<menu-item id="menubarItemBotExplain" text="Explain the Last Error" />
+		<menu-item id="menubarItemBotClear" text="Clear the Chat" />
+	</menu>
+
+	<menu text="Help">
+		<menu-item id="menubarItemGuide" text="User Guide" shortcutText="F1" />
+	</menu>
+</menubar>

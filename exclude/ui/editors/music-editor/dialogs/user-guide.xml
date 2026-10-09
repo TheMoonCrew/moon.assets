@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="560" height="620" title="Music Editor Guide">
+	<tabview width="100%" height="100%">
+		<box width="100%" text="Basics">
+			<label width="100%" text="The music editor edits the time changes of a song: points that set the BPM and the time signature from a moment on.\n\nEvery point has a start time, a BPM, a number of beats per bar and a beat unit. The first point always starts at 0.\n\nThe top left shows the current bar and pulses on every beat. The timeline shows the waveform, the beat grid and one marker per point.\n\nSave writes music_editor/song.json in your data folder. The editor autosaves every 30 seconds and keeps three older backups. Copy as Song Metadata gives the points in the format of the song metadata files." />
+		</box>
+		<box width="100%" text="Hotkeys">
+			<tableview width="100%" height="540" contentWidth="100%">
+				<header width="100%">
+					<column id="action" text="Action" width="55%" />
+					<column id="keybind" text="Keybind" width="45%" />
+				</header>
+				<data>
+					<item action="Play / pause" keybind="Space" />
+					<item action="Step one snap division (Shift: a bar)" keybind="Left / Right" />
+					<item action="Start / end of the song" keybind="Home / End" />
+					<item action="Add a point at the playhead" keybind="Enter or P" />
+					<item action="Delete the selected point" keybind="Delete" />
+					<item action="Select the next / previous point" keybind="Tab, PgUp, PgDn" />
+					<item action="BPM +-1 (Shift +-5, Ctrl +-0.1)" keybind="Up / Down" />
+					<item action="Beats per bar (Shift: beat unit)" keybind="Alt + Up / Down" />
+					<item action="Nudge the point (Shift: 10 ms)" keybind="Alt + Left / Right" />
+					<item action="Halve / double the BPM" keybind="H / D" />
+					<item action="Tap tempo" keybind="T" />
+					<item action="Jump to a time / move the point to a time" keybind="J / Shift + J" />
+					<item action="Loop start / end / toggle / clear" keybind="I / O / L / Shift + L" />
+					<item action="Metronome, snapping" keybind="M, G" />
+					<item action="Zoom, fit the song" keybind="+ and -, F" />
+					<item action="Undo / redo" keybind="Ctrl + Z / Ctrl + Y" />
+					<item action="Save, open a song" keybind="Ctrl + S, Ctrl + O" />
+					<item action="Export, import a JSON file" keybind="Ctrl + E, Ctrl + I" />
+					<item action="Copy, paste" keybind="Ctrl + C, Ctrl + V" />
+					<item action="Older backup, restore the autosave" keybind="Ctrl + B, Ctrl + Shift + R" />
+					<item action="Zoom the timeline" keybind="Mouse wheel" />
+					<item action="Scroll the timeline" keybind="Shift + wheel" />
+					<item action="Move a point" keybind="Drag its marker" />
+					<item action="Add a point in the marker lane" keybind="Double click" />
+					<item action="Remove a point" keybind="Right click its marker" />
+					<item action="Show this guide" keybind="F1" />
+				</data>
+			</tableview>
+		</box>
+	</tabview>
+</dialog>

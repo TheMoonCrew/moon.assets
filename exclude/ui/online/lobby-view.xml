@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vbox width="100%" height="100%" style="background-color: #101722;">
+	<hbox width="100%" style="padding: 8px 14px; spacing: 10px; background-color: #17202E;">
+		<label text="ONLINE" style="font-size: 24px; color: #7CF6CF;" verticalAlign="center" />
+		<label id="serverStatus" text="Not connected" width="100%" verticalAlign="center" style="color: #B7C8FF;" />
+		<textfield id="serverHost" width="190" placeholder="Server address" />
+		<textfield id="serverPort" width="70" placeholder="Port" restrictChars="0-9" maxChars="5" />
+		<button id="serverConnect" text="Connect" width="90" />
+		<button id="lobbyBack" text="Back" width="80" />
+	</hbox>
+
+	<box width="100%" height="100%">
+	<vbox id="browserPanel" width="100%" height="100%" style="padding: 10px 14px; spacing: 8px;">
+		<tabview id="browserTabs" width="100%" height="100%">
+			<box text="Rooms" width="100%" height="100%">
+				<hbox width="100%" height="100%" style="padding: 8px; spacing: 14px;">
+					<vbox width="62%" height="100%" style="spacing: 6px;">
+						<hbox width="100%" style="spacing: 8px;">
+							<label text="Open rooms" style="font-size: 18px; color: #FFFFFF;" verticalAlign="center" />
+							<spacer width="100%" />
+							<button id="roomsRefresh" text="Refresh" width="90" />
+						</hbox>
+						<listview id="roomList" width="100%" height="100%" selectionMode="one-item">
+							<item-renderer width="100%" allowHover="true">
+								<hbox width="100%" style="padding: 7px 10px; spacing: 12px;">
+									<label id="title" width="38%" style="font-size: 16px; color: #FFFFFF;" />
+									<label id="subtitle" width="100%" style="color: #AAB2BF;" />
+									<label id="tag" horizontalAlign="right" style="color: #7C8BFF;" />
+								</hbox>
+							</item-renderer>
+							<data />
+						</listview>
+						<label id="roomsEmpty" text="" width="100%" style="color: #6B7280;" />
+					</vbox>
+
+					<vbox width="38%" height="100%" style="spacing: 8px;">
+						<label text="Host a room" style="font-size: 18px; color: #FFFFFF;" />
+						<textfield id="createName" width="100%" placeholder="Room name (optional)" maxChars="32" />
+						<hbox width="100%" style="spacing: 8px;">
+							<label text="Players" verticalAlign="center" />
+							<number-stepper id="createMax" min="2" max="8" step="1" pos="4" width="90" />
+							<checkbox id="createPublic" text="Public" selected="true" />
+						</hbox>
+						<button id="createRoom" text="Create room" width="100%" />
+
+						<label text="Join with a code" style="font-size: 18px; color: #FFFFFF;" />
+						<hbox width="100%" style="spacing: 8px;">
+							<textfield id="joinCode" width="100%" placeholder="Room code" maxChars="8" />
+							<button id="joinRoom" text="Join" width="80" />
+						</hbox>
+						<button id="joinSelected" text="Join the selected room" width="100%" disabled="true" />
+						<label id="browserHint" text="" width="100%" style="color: #FFD166;" />
+					</vbox>
+				</hbox>
+			</box>
+
+			<box text="Leaderboard" width="100%" height="100%">
+				<vbox width="100%" height="100%" style="padding: 8px; spacing: 8px;">
+					<hbox width="100%" style="spacing: 8px;">
+						<dropdown id="boardSong" width="260" />
+						<dropdown id="boardDifficulty" width="140" />
+						<button id="boardRefresh" text="Refresh" width="90" />
+					</hbox>
+					<listview id="boardList" width="100%" height="100%">
+						<item-renderer width="100%" allowHover="true">
+							<hbox width="100%" style="padding: 7px 10px; spacing: 12px;">
+								<label id="title" width="100%" style="font-size: 16px; color: #FFFFFF;" />
+								<label id="subtitle" horizontalAlign="right" style="color: #7CF6CF;" />
+							</hbox>
+						</item-renderer>
+						<data />
+					</listview>
+					<label id="boardEmpty" text="" width="100%" style="color: #6B7280;" />
+				</vbox>
+			</box>
+		</tabview>
+	</vbox>
+
+	<hbox id="lobbyPanel" width="100%" height="100%" hidden="true" style="padding: 10px 14px; spacing: 14px;">
+		<vbox width="26%" height="100%" style="spacing: 6px;">
+			<label text="Players" style="font-size: 18px; color: #FFFFFF;" />
+			<listview id="memberList" width="100%" height="100%" selectionMode="one-item">
+				<item-renderer width="100%" allowHover="true">
+					<hbox width="100%" style="padding: 7px 10px; spacing: 10px;">
+						<label id="title" width="100%" style="font-size: 16px; color: #FFFFFF;" />
+						<label id="subtitle" horizontalAlign="right" style="color: #7CF6CF;" />
+					</hbox>
+				</item-renderer>
+				<data />
+			</listview>
+			<button id="memberKick" text="Remove the selected player" width="100%" disabled="true" />
+		</vbox>
+
+		<vbox width="36%" height="100%" style="spacing: 8px;">
+			<label id="roomTitle" text="" width="100%" style="font-size: 22px; color: #7CF6CF;" />
+			<hbox width="100%" style="spacing: 8px;">
+				<label text="Code" verticalAlign="center" style="color: #AAB2BF;" />
+				<label id="roomCode" text="" style="font-size: 30px; color: #FFFFFF;" verticalAlign="center" />
+				<spacer width="100%" />
+				<button id="codeCopy" text="Copy" width="70" />
+			</hbox>
+
+			<label text="Song" style="font-size: 18px; color: #FFFFFF;" />
+			<dropdown id="songPicker" width="100%" />
+			<dropdown id="difficultyPicker" width="100%" />
+			<label id="songInfo" text="" width="100%" style="color: #FFD166;" />
+
+			<hbox id="settingsRow" width="100%" style="spacing: 8px;">
+				<checkbox id="settingPublic" text="Public room" selected="true" />
+				<label text="Players" verticalAlign="center" />
+				<number-stepper id="settingMax" min="2" max="8" step="1" pos="4" width="90" />
+			</hbox>
+
+			<label id="lobbyStatus" text="" width="100%" style="color: #B7C8FF;" />
+
+			<hbox width="100%" style="spacing: 8px;">
+				<button id="readyToggle" text="Ready" width="33%" />
+				<button id="startMatch" text="Start" width="34%" />
+				<button id="leaveRoom" text="Leave" width="33%" />
+			</hbox>
+		</vbox>
+
+		<vbox width="38%" height="100%" style="spacing: 6px;">
+			<label text="Chat" style="font-size: 18px; color: #FFFFFF;" />
+			<scrollview id="chatScroll" width="100%" height="100%" contentWidth="100%" style="background-color: #0B111A;">
+				<label id="chatLog" text="" width="100%" style="padding: 6px; color: #D6E0FF;" />
+			</scrollview>
+			<hbox width="100%" style="spacing: 6px;">
+				<textfield id="chatInput" width="100%" placeholder="Say something" maxChars="200" />
+				<button id="chatSend" text="Send" width="70" />
+			</hbox>
+		</vbox>
+	</hbox>
+	</box>
+</vbox>

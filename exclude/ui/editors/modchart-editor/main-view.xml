@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vbox width="100%" height="100%">
+	<import source="components/menu.xml" />
+
+	<hbox width="100%" height="100%">
+		<vbox width="100%" height="100%">
+			<box id="previewArea" width="100%" height="50%" />
+
+			<import source="components/playbar.xml" />
+
+			<box id="timelineArea" width="100%" height="100%" />
+		</vbox>
+
+		<import source="components/properties.xml" width="340" />
+	</hbox>
+</vbox>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="host.png">
+	<!-- Created with Adobe Animate version 21.0.9.42677 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="host idle0000" x="0" y="0" width="394" height="166"/>
+	<SubTexture name="host idle0001" x="0" y="0" width="394" height="166"/>
+	<SubTexture name="host idle0002" x="0" y="0" width="394" height="166"/>
+	<SubTexture name="host idle0003" x="394" y="0" width="394" height="166"/>
+	<SubTexture name="host idle0004" x="394" y="0" width="394" height="166"/>
+	<SubTexture name="host idle0005" x="394" y="0" width="394" height="166"/>
+	<SubTexture name="host idle0006" x="0" y="166" width="394" height="166"/>
+	<SubTexture name="host idle0007" x="0" y="166" width="394" height="166"/>
+	<SubTexture name="host idle0008" x="0" y="166" width="394" height="166"/>
+	<SubTexture name="host idle0009" x="394" y="0" width="394" height="166"/>
+	<SubTexture name="host selected0000" x="394" y="166" width="494" height="179" frameX="0" frameY="0" frameWidth="496" frameHeight="181"/>
+	<SubTexture name="host selected0001" x="0" y="345" width="496" height="181"/>
+	<SubTexture name="host selected0002" x="496" y="345" width="494" height="178" frameX="0" frameY="0" frameWidth="496" frameHeight="181"/>
+</TextureAtlas>

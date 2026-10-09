@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="420" height="520" title="Open Song">
+	<vbox width="100%" height="100%">
+		<label width="100%" text="Choose the song to edit a modchart for." />
+		<SongTemplateList id="openSongList" width="100%" height="100%" />
+		<hbox width="100%" horizontalAlign="right">
+			<button text="Cancel" id="dialogCancel" />
+		</hbox>
+	</vbox>
+</dialog>

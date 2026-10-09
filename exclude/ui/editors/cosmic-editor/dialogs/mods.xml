@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="760" height="520" title="Mod Doctor">
+	<vbox width="100%" height="100%">
+		<label id="modsSummary" width="100%" text="" />
+		<tabview width="100%" height="100%">
+			<box width="100%" height="100%" text="Problems">
+				<listview id="problemList" width="100%" height="100%" />
+			</box>
+			<box width="100%" height="100%" text="Load order">
+				<listview id="orderList" width="100%" height="100%" />
+			</box>
+			<box width="100%" height="100%" text="Overridden files">
+				<listview id="overrideList" width="100%" height="100%" />
+			</box>
+		</tabview>
+		<hbox width="100%" horizontalAlign="right">
+			<button text="Check again" id="modsRefresh" />
+			<spacer width="100%" />
+			<button text="Close" id="dialogClose" />
+		</hbox>
+	</vbox>
+</dialog>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menubar id="menubar" width="100%" paddingLeft="256">
+	<style>
+		.menu {
+		width: 200px;
+		}
+	</style>
+
+	<menu text="File" id="menubarMenuFile">
+		<menu-item id="menubarItemOpenSong" text="Open Song" shortcutText="Ctrl+O" />
+		<menu-separator />
+		<menu-item id="menubarItemSave" text="Save" shortcutText="Ctrl+S" />
+		<menu-item id="menubarItemExport" text="Export JSON" shortcutText="Ctrl+E" />
+		<menu-item id="menubarItemImport" text="Import JSON" shortcutText="Ctrl+I" />
+		<menu-item id="menubarItemCopy" text="Copy JSON" shortcutText="Ctrl+C" />
+		<menu-item id="menubarItemCopyMetadata" text="Copy as Song Metadata" shortcutText="Ctrl+Shift+C" />
+		<menu-item id="menubarItemPaste" text="Paste JSON" shortcutText="Ctrl+V" />
+		<menu-separator />
+		<menu-item id="menubarItemRestoreAutosave" text="Restore Autosave" shortcutText="Ctrl+Shift+R" />
+		<menu-item id="menubarItemLoadBackup" text="Load Older Backup" shortcutText="Ctrl+B" />
+		<menu-separator />
+		<menu-item id="menubarItemExit" text="Exit" shortcutText="Esc" />
+	</menu>
+
+	<menu text="Edit" width="208px;">
+		<menu-item id="menubarItemUndo" text="Undo" shortcutText="Ctrl+Z" />
+		<menu-item id="menubarItemRedo" text="Redo" shortcutText="Ctrl+Y" />
+		<menu-separator />
+		<menu-item id="menubarItemAddPoint" text="Add Point at Playhead" shortcutText="Enter" />
+		<menu-item id="menubarItemDeletePoint" text="Delete Point" shortcutText="Delete" />
+		<menu-separator />
+		<menu-item id="menubarItemHalve" text="Halve the BPM" shortcutText="H" />
+		<menu-item id="menubarItemDouble" text="Double the BPM" shortcutText="D" />
+		<menu-item id="menubarItemTap" text="Tap Tempo" shortcutText="T" />
+		<menu-separator />
+		<menu-item id="menubarItemMoveTo" text="Move Point to Time" shortcutText="Shift+J" />
+	</menu>
+
+	<menu text="View">
+		<menu-item id="menubarItemZoomIn" text="Zoom In" shortcutText="+" />
+		<menu-item id="menubarItemZoomOut" text="Zoom Out" shortcutText="-" />
+		<menu-item id="menubarItemFit" text="Fit Song" shortcutText="F" />
+		<menu-separator />
+		<menu-checkbox id="menubarItemWaveform" text="Show Waveform" selected="true" />
+	</menu>
+
+	<menu text="Playback">
+		<menu-item id="menubarItemPlayPause" text="Toggle Playback" shortcutText="Space" />
+		<menu-item id="menubarItemRestart" text="Restart" shortcutText="Home" />
+		<menu-item id="menubarItemJump" text="Jump to Time" shortcutText="J" />
+		<menu-separator />
+		<menu-checkbox id="menubarItemMetronome" text="Metronome" shortcutText="M" />
+		<menu-checkbox id="menubarItemSnap" text="Snap to the Grid" shortcutText="G" selected="true" />
+		<menu-separator />
+		<menu-item id="menubarItemLoopStart" text="Set Loop Start" shortcutText="I" />
+		<menu-item id="menubarItemLoopEnd" text="Set Loop End" shortcutText="O" />
+		<menu-item id="menubarItemLoopToggle" text="Toggle Loop" shortcutText="L" />
+		<menu-item id="menubarItemLoopClear" text="Clear Loop" shortcutText="Shift+L" />
+	</menu>
+
+	<menu text="Help">
+		<menu-item id="menubarItemUserGuide" text="User Guide" shortcutText="F1" />
+	</menu>
+
+	<spacer width="100%" />
+	<menu-item id="menubarItemModchartEditor" text="Go to Modchart Editor" />
+</menubar>

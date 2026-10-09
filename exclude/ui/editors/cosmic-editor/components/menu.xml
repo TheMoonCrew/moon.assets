@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menubar id="menubar" width="100%" paddingLeft="256">
+	<style>
+		.menu {
+		width: 220px;
+		}
+	</style>
+
+	<menu text="File" id="menubarMenuFile">
+		<menu-item id="menubarItemNewFile" text="New File" />
+		<menu-item id="menubarItemNewFolder" text="New Folder" />
+		<menu-item id="menubarItemOpen" text="Open Selected" />
+		<menu-separator />
+		<menu-item id="menubarItemSave" text="Save" shortcutText="Ctrl+S" />
+		<menu-item id="menubarItemReload" text="Reload" shortcutText="F5" />
+		<menu-separator />
+		<menu-item id="menubarItemRename" text="Rename" shortcutText="F2" />
+		<menu-item id="menubarItemCopy" text="Duplicate" />
+		<menu-item id="menubarItemDelete" text="Delete" shortcutText="Delete" />
+		<menu-separator />
+		<menu-item id="menubarItemRestore" text="Restore a Backup" />
+		<menu-item id="menubarItemInfo" text="File Info" shortcutText="F3" />
+		<menu-separator />
+		<menu-item id="menubarItemExit" text="Exit" shortcutText="Esc" />
+	</menu>
+
+	<menu text="Edit">
+		<menu-item id="menubarItemUndo" text="Undo" shortcutText="Ctrl+Z" />
+		<menu-item id="menubarItemRedo" text="Redo" shortcutText="Ctrl+Y" />
+	</menu>
+
+	<menu text="Search">
+		<menu-item id="menubarItemFind" text="Find" shortcutText="Ctrl+F" />
+		<menu-item id="menubarItemReplace" text="Replace" shortcutText="Ctrl+H" />
+		<menu-item id="menubarItemFindNext" text="Find Next" shortcutText="F4" />
+		<menu-item id="menubarItemGoto" text="Go to Line" shortcutText="Ctrl+G" />
+	</menu>
+
+	<menu text="View">
+		<menu-item id="menubarItemFontLarger" text="Larger Font" shortcutText="Ctrl++" />
+		<menu-item id="menubarItemFontSmaller" text="Smaller Font" shortcutText="Ctrl+-" />
+		<menu-separator />
+		<menu-item id="menubarItemRefresh" text="Refresh the Folder" />
+		<menu-item id="menubarItemClearConsole" text="Clear Console" />
+	</menu>
+
+	<menu text="Tools">
+		<menu-item id="menubarItemCheck" text="Check Syntax" shortcutText="F7" />
+		<menu-separator />
+		<menu-item id="menubarItemNewMod" text="Create a New Mod" />
+		<menu-item id="menubarItemTitleConfig" text="Add a Title Screen Config" />
+		<menu-item id="menubarItemModDoctor" text="Mod Doctor" shortcutText="F8" />
+	</menu>
+
+	<menu text="Help">
+		<menu-item id="menubarItemGuide" text="User Guide" shortcutText="F1" />
+	</menu>
+</menubar>

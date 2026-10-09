@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<panel id="propertiesPanel" width="340" height="100%" text="Event">
+	<vbox width="100%" height="100%">
+		<label id="propertiesEmpty" width="100%" text="No event selected.&#10;Click a block on the timeline,&#10;double click a row to add one,&#10;or press Add event." />
+
+		<vbox id="propertiesForm" width="100%" hidden="true">
+			<LabeledRow text="Target">
+				<dropdown id="propTarget" width="170">
+					<data>
+						<item id="player" text="Player strumline" />
+						<item id="opponent" text="Opponent strumline" />
+						<item id="both" text="Both strumlines" />
+						<item id="hud" text="HUD camera" />
+						<item id="game" text="Game camera" />
+					</data>
+				</dropdown>
+			</LabeledRow>
+			<LabeledRow text="Modifier">
+				<dropdown id="propModifier" width="170" />
+			</LabeledRow>
+			<LabeledRow text="Lane">
+				<dropdown id="propLane" width="170">
+					<data>
+						<item id="-1" text="All lanes" />
+						<item id="0" text="Left" />
+						<item id="1" text="Down" />
+						<item id="2" text="Up" />
+						<item id="3" text="Right" />
+					</data>
+				</dropdown>
+			</LabeledRow>
+			<LabeledRow text="Start (ms)">
+				<number-stepper id="propTime" pos="0" min="0" max="3600000" step="10" width="170" />
+			</LabeledRow>
+			<LabeledRow text="Length (ms)">
+				<number-stepper id="propDuration" pos="0" min="0" max="600000" step="10" width="170" />
+			</LabeledRow>
+			<LabeledRow text="Value">
+				<number-stepper id="propValue" pos="0" min="-1200" max="1200" step="1" precision="2" width="170" />
+			</LabeledRow>
+			<slider id="propValueSlider" pos="0" min="-1200" max="1200" step="1" precision="2" width="100%" />
+			<label id="propUnit" text="" width="100%" />
+			<LabeledRow text="Ease">
+				<dropdown id="propEase" width="170">
+					<data>
+						<item id="linear" text="linear" />
+						<item id="instant" text="instant" />
+						<item id="smooth" text="smooth" />
+						<item id="quadIn" text="quadIn" />
+						<item id="quadOut" text="quadOut" />
+						<item id="quadInOut" text="quadInOut" />
+						<item id="cubicIn" text="cubicIn" />
+						<item id="cubicOut" text="cubicOut" />
+						<item id="cubicInOut" text="cubicInOut" />
+						<item id="sineIn" text="sineIn" />
+						<item id="sineOut" text="sineOut" />
+						<item id="sineInOut" text="sineInOut" />
+						<item id="expoIn" text="expoIn" />
+						<item id="expoOut" text="expoOut" />
+						<item id="backIn" text="backIn" />
+						<item id="backOut" text="backOut" />
+						<item id="bounceOut" text="bounceOut" />
+						<item id="elasticOut" text="elasticOut" />
+					</data>
+				</dropdown>
+			</LabeledRow>
+			<hbox width="100%">
+				<button id="propDuplicate" text="Duplicate" width="50%" />
+				<button id="propDelete" text="Delete" width="50%" />
+			</hbox>
+		</vbox>
+
+		<spacer height="12" />
+		<label id="propertiesStats" width="100%" text="" />
+	</vbox>
+</panel>

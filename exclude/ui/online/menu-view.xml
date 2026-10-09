@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vbox width="100%" height="100%" style="background-color: #101722; padding: 18px 26px; spacing: 14px;">
+	<hbox width="100%" style="spacing: 14px;">
+		<label text="ONLINE" style="font-size: 38px; color: #7CF6CF;" verticalAlign="center" />
+		<label id="headline" text="" width="100%" verticalAlign="center" style="font-size: 16px; color: #B7C8FF;" />
+		<button id="menuBack" text="Back" width="100" height="36" />
+	</hbox>
+
+	<hbox width="100%" height="88%" style="spacing: 18px;">
+		<vbox id="profileCard" width="350" height="100%" style="padding: 18px; spacing: 12px; background-color: #17202E; border: 1px solid #2C3A52; border-radius: 8px;">
+			<label text="YOU" style="font-size: 14px; color: #6B7C99;" />
+			<hbox width="100%" style="spacing: 14px;">
+				<box id="avatarSlot" width="96" height="96" style="background-color: #0B111A; border: 1px solid #2C3A52;" />
+				<vbox width="100%" style="spacing: 4px;" verticalAlign="center">
+					<label id="profileName" text="" width="100%" style="font-size: 22px; color: #FFFFFF;" />
+					<label id="profileKind" text="" width="100%" style="color: #7CF6CF;" />
+				</vbox>
+			</hbox>
+
+			<rule width="100%" />
+
+			<label text="DISCORD" style="font-size: 14px; color: #6B7C99;" />
+			<label id="discordStatus" text="" width="100%" style="font-size: 16px;" />
+			<label id="discordHint" text="" width="100%" style="color: #8FA0CC;" />
+			<button id="discordAction" text="Log in with Discord" width="100%" height="44" />
+			<hbox width="100%" style="spacing: 8px;">
+				<button id="discordCopy" text="Copy the login link" width="50%" hidden="true" />
+				<button id="discordReopen" text="Open it again" width="50%" hidden="true" />
+			</hbox>
+
+			<rule width="100%" />
+
+			<label text="YOUR RECORD" style="font-size: 14px; color: #6B7C99;" />
+			<label id="profileStats" text="" width="100%" style="color: #B7C8FF;" />
+		</vbox>
+
+		<vbox width="100%" height="100%" style="spacing: 14px;">
+			<label text="PLAY" style="font-size: 14px; color: #6B7C99;" />
+
+			<vbox width="100%" style="spacing: 6px;">
+				<button id="actionQuick" text="Quick match" width="100%" height="56" style="font-size: 22px;" />
+				<label text="Jump into a public room that has space, or open a new one." width="100%" style="color: #8FA0CC;" />
+			</vbox>
+
+			<vbox width="100%" style="spacing: 6px;">
+				<button id="actionHost" text="Host a room" width="100%" height="56" style="font-size: 22px;" />
+				<label text="Create a room, pick the song and share the code with your friends." width="100%" style="color: #8FA0CC;" />
+			</vbox>
+
+			<vbox width="100%" style="spacing: 6px;">
+				<button id="actionBrowse" text="Find a room" width="100%" height="56" style="font-size: 22px;" />
+				<label text="See the open rooms or join one with its code." width="100%" style="color: #8FA0CC;" />
+			</vbox>
+
+			<vbox width="100%" style="spacing: 6px;">
+				<button id="actionBoard" text="Leaderboard" width="100%" height="56" style="font-size: 22px;" />
+				<label text="The best scores of every song on this server." width="100%" style="color: #8FA0CC;" />
+			</vbox>
+
+			<label id="actionHint" text="" width="100%" style="font-size: 16px; color: #FFD166;" />
+		</vbox>
+
+		<vbox id="serverCard" width="380" height="100%" style="padding: 18px; spacing: 10px; background-color: #17202E; border: 1px solid #2C3A52; border-radius: 8px;">
+			<label text="SERVER" style="font-size: 14px; color: #6B7C99;" />
+			<label id="serverName" text="" width="100%" style="font-size: 20px; color: #FFFFFF;" />
+			<label id="serverMotd" text="" width="100%" style="color: #8FA0CC;" />
+			<label id="serverStatus" text="" width="100%" style="font-size: 16px;" />
+			<hbox width="100%" style="spacing: 8px;">
+				<textfield id="serverHost" width="100%" placeholder="Server address" />
+				<textfield id="serverPort" width="72" placeholder="Port" restrictChars="0-9" maxChars="5" />
+			</hbox>
+			<button id="serverConnect" text="Connect" width="100%" />
+
+			<rule width="100%" />
+
+			<label id="playersTitle" text="PLAYERS ONLINE" style="font-size: 14px; color: #6B7C99;" />
+			<listview id="playerList" width="100%" height="100%">
+				<item-renderer width="100%" allowHover="true">
+					<hbox width="100%" style="padding: 5px 8px; spacing: 10px;">
+						<label id="title" width="100%" style="color: #FFFFFF;" />
+						<label id="subtitle" horizontalAlign="right" style="color: #7C8BFF;" />
+					</hbox>
+				</item-renderer>
+				<data />
+			</listview>
+		</vbox>
+	</hbox>
+
+</vbox>

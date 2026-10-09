@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vbox width="100%" height="100%">
+	<import source="components/menu.xml" />
+
+	<hbox width="100%" height="100%">
+		<vbox id="leftPanel" width="290" height="100%" style="padding: 4px; spacing: 4px; background-color: #20242B;">
+			<label text="Characters" />
+			<textfield id="charFilter" width="100%" placeholder="Filter" />
+			<listview id="charList" width="100%" height="42%" />
+			<hbox width="100%" style="spacing: 4px;">
+				<button id="charReload" text="Reload" width="50%" />
+				<button id="charCount" text="" width="50%" disabled="true" />
+			</hbox>
+			<label text="Animations" />
+			<listview id="animList" width="100%" height="100%">
+				<item-renderer width="100%" allowHover="true">
+					<hbox width="100%" style="padding: 4px 6px; spacing: 8px;">
+						<label id="title" width="100%" style="color: #FFFFFF;" />
+						<label id="subtitle" horizontalAlign="right" style="color: #7C8BFF;" />
+					</hbox>
+				</item-renderer>
+				<data />
+			</listview>
+		</vbox>
+
+		<vbox width="100%" height="100%">
+			<box id="worldArea" width="100%" height="100%" />
+
+			<hbox width="100%" style="padding: 3px 8px; background-color: #1B1E24;">
+				<label id="statusLabel" text="" width="100%" />
+			</hbox>
+		</vbox>
+
+		<tabview id="rightPanel" width="320" height="100%">
+			<box text="Offset" width="100%" height="100%">
+				<vbox width="100%" height="100%" style="padding: 8px; spacing: 8px;">
+					<label id="animTitle" text="No animation" width="100%" style="font-size: 18px; color: #9B8CFF;" />
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="X" verticalAlign="center" />
+						<number-stepper id="offsetX" min="-4000" max="4000" step="1" pos="0" width="110" />
+						<label text="Y" verticalAlign="center" />
+						<number-stepper id="offsetY" min="-4000" max="4000" step="1" pos="0" width="110" />
+					</hbox>
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="Arrow keys move by" verticalAlign="center" />
+						<dropdown id="nudgeStep" width="80" selectedIndex="1">
+							<data>
+								<item text="1" value="1" />
+								<item text="5" value="5" />
+								<item text="10" value="10" />
+								<item text="25" value="25" />
+							</data>
+						</dropdown>
+					</hbox>
+					<hbox width="100%" style="spacing: 6px;">
+						<button id="offsetReset" text="Reset" width="33%" />
+						<button id="offsetZero" text="Zero" width="33%" />
+						<button id="offsetMirror" text="Mirror" width="34%" />
+					</hbox>
+					<button id="offsetCopyAll" text="Copy this offset to every animation" width="100%" />
+					<button id="offsetCopyPair" text="Copy to the opposite direction" width="100%" />
+
+					<label text="Whole character" width="100%" style="font-size: 16px; color: #AAB2BF;" />
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="X" verticalAlign="center" />
+						<number-stepper id="globalX" min="-4000" max="4000" step="1" pos="0" width="110" />
+						<label text="Y" verticalAlign="center" />
+						<number-stepper id="globalY" min="-4000" max="4000" step="1" pos="0" width="110" />
+					</hbox>
+
+					<label text="Camera focus" width="100%" style="font-size: 16px; color: #AAB2BF;" />
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="X" verticalAlign="center" />
+						<number-stepper id="cameraX" min="-4000" max="4000" step="5" pos="0" width="110" />
+						<label text="Y" verticalAlign="center" />
+						<number-stepper id="cameraY" min="-4000" max="4000" step="5" pos="0" width="110" />
+					</hbox>
+
+					<label id="changeInfo" text="" width="100%" style="color: #FFD166;" />
+				</vbox>
+			</box>
+
+			<box text="Playback" width="100%" height="100%">
+				<vbox width="100%" height="100%" style="padding: 8px; spacing: 8px;">
+					<hbox width="100%" style="spacing: 6px;">
+						<button id="playToggle" text="Pause" width="33%" />
+						<button id="playRestart" text="Restart" width="33%" />
+						<button id="playIdle" text="Idle" width="34%" />
+					</hbox>
+					<hbox width="100%" style="spacing: 6px;">
+						<button id="framePrevious" text="Previous frame" width="50%" />
+						<button id="frameNext" text="Next frame" width="50%" />
+					</hbox>
+					<slider id="frameSlider" width="100%" min="0" max="1" step="1" pos="0" />
+					<label id="frameLabel" text="Frame -" width="100%" />
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="Frame rate" verticalAlign="center" />
+						<number-stepper id="animFps" min="1" max="120" step="1" pos="24" width="110" />
+					</hbox>
+					<checkbox id="animLoop" text="Loop this animation" />
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="Speed" verticalAlign="center" />
+						<dropdown id="playSpeed" width="110" selectedIndex="2">
+							<data>
+								<item text="0.25x" value="0.25" />
+								<item text="0.5x" value="0.5" />
+								<item text="1x" value="1" />
+								<item text="2x" value="2" />
+							</data>
+						</dropdown>
+					</hbox>
+					<checkbox id="playAuto" text="Replay when it ends" selected="true" />
+				</vbox>
+			</box>
+
+			<box text="Character" width="100%" height="100%">
+				<vbox width="100%" height="100%" style="padding: 8px; spacing: 8px;">
+					<label id="charTitle" text="" width="100%" style="font-size: 18px; color: #9B8CFF;" />
+					<label id="charAsset" text="" width="100%" style="color: #AAB2BF;" />
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="Scale" verticalAlign="center" />
+						<number-stepper id="charScale" min="0.05" max="10" step="0.05" precision="2" pos="1" width="110" />
+					</hbox>
+					<checkbox id="charFlip" text="Flip horizontally" />
+					<checkbox id="charPixel" text="Pixel art (no smoothing)" />
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="Dance every (beats)" verticalAlign="center" />
+						<number-stepper id="charDance" min="0" max="16" step="0.5" precision="1" pos="1" width="90" />
+					</hbox>
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="Sing time (steps)" verticalAlign="center" />
+						<number-stepper id="charSing" min="0" max="64" step="0.5" precision="1" pos="4" width="90" />
+					</hbox>
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="Starting animation" verticalAlign="center" />
+						<dropdown id="charStart" width="130" />
+					</hbox>
+					<button id="charCheck" text="Check the animations" width="100%" />
+				</vbox>
+			</box>
+
+			<box text="View" width="100%" height="100%">
+				<vbox width="100%" height="100%" style="padding: 8px; spacing: 8px;">
+					<checkbox id="viewOnion" text="Onion skin (idle ghost)" />
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="Onion opacity" verticalAlign="center" />
+						<number-stepper id="viewOnionAlpha" min="0.1" max="0.9" step="0.1" precision="1" pos="0.5" width="90" />
+					</hbox>
+					<checkbox id="viewGrid" text="Grid" selected="true" />
+					<checkbox id="viewOrigin" text="Character origin" selected="true" />
+					<checkbox id="viewBounds" text="Frame bounds" selected="true" />
+					<checkbox id="viewFocus" text="Camera focus point" selected="true" />
+					<hbox width="100%" style="spacing: 6px;">
+						<label text="Background" verticalAlign="center" />
+						<dropdown id="viewBackground" width="130" selectedIndex="0">
+							<data>
+								<item text="Light grid" value="light" />
+								<item text="Dark grid" value="dark" />
+								<item text="Green screen" value="green" />
+								<item text="Black" value="black" />
+							</data>
+						</dropdown>
+					</hbox>
+					<hbox width="100%" style="spacing: 6px;">
+						<button id="viewFit" text="Fit" width="33%" />
+						<button id="viewReset" text="Reset view" width="34%" />
+						<button id="viewHide" text="Hide UI" width="33%" />
+					</hbox>
+				</vbox>
+			</box>
+		</tabview>
+	</hbox>
+</vbox>

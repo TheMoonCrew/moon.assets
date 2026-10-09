@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="600" height="620" title="Cosmic Editor Guide">
+	<tabview width="100%" height="100%">
+		<box width="100%" text="Basics">
+			<label width="100%" text="The Cosmic editor edits the game files. Everything it touches lives inside four roots: GAME (the folder the game runs from), ASSETS, MODS and DATA (the save folder). Paths that try to leave a root are rejected.\n\nPick a root in the dropdown, or type ROOT:/folder in the path field and press Enter. Double click a folder to enter it and a file to open it. The filter narrows the list.\n\nText files up to 1 MB open with line numbers and highlighting for Lua, Haxe, JSON and XML. The original line endings are kept. Save keeps the previous version as .bak1 and moves older ones to .bak2, .bak3, so Restore a Backup can bring any of them back.\n\nA file that changes on disk while it is open is reported in the console and Reload loads the new version.\n\nTools has a few helpers for mods: Create a New Mod writes a mod folder with a valid _polymod_meta.json, Add a Title Screen Config drops a title-screen.json into the mod you are browsing, and Mod Doctor checks the enabled mods for missing dependencies, a wrong load order and files that two mods both replace. Saving a _polymod_meta.json or a title-screen.json validates it." />
+		</box>
+		<box width="100%" text="Hotkeys">
+			<tableview width="100%" height="540" contentWidth="100%">
+				<header width="100%">
+					<column id="action" text="Action" width="55%" />
+					<column id="keybind" text="Keybind" width="45%" />
+				</header>
+				<data>
+					<item action="Save" keybind="Ctrl + S" />
+					<item action="Reload from disk" keybind="F5" />
+					<item action="Rename the selected entry" keybind="F2" />
+					<item action="Delete the selected entry" keybind="Delete" />
+					<item action="Info about the selected entry" keybind="F3" />
+					<item action="Check syntax" keybind="F7" />
+					<item action="Mod Doctor" keybind="F8" />
+					<item action="Undo / redo" keybind="Ctrl + Z / Ctrl + Y" />
+					<item action="Find / replace" keybind="Ctrl + F / Ctrl + H" />
+					<item action="Next / previous match" keybind="F4 / Shift + F4" />
+					<item action="Go to a line" keybind="Ctrl + G" />
+					<item action="Font size" keybind="Ctrl + Plus / Ctrl + Minus" />
+					<item action="Insert two spaces" keybind="Tab" />
+					<item action="Show this guide" keybind="F1" />
+					<item action="Leave" keybind="Esc" />
+				</data>
+			</tableview>
+		</box>
+	</tabview>
+</dialog>

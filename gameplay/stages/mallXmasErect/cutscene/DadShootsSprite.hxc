@@ -1,0 +1,21 @@
+import flixel.math.FlxPoint;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
+
+// a unique object for santa getting KILLED
+class DadShootsSprite extends FunkinSprite
+{
+  public function new(x:Float, y:Float)
+  {
+    super(x, y);
+
+    loadTextureAtlas('gameplay/stages/mallXmasErect/cutscene/parents-shoot');
+    animation.addBySymbol('wholeTimeline', this.getDefaultSymbol(), this.library.frameRate, false);
+  }
+
+  public function playCutscene():Void
+  {
+    this.animation.play('wholeTimeline');
+  }
+}

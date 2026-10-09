@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="420" title="Time">
+	<vbox width="100%">
+		<label id="timeInputPrompt" width="100%" text="Type a time." />
+		<textfield id="timeInputField" width="100%" placeholder="12.5   1:05.5   750ms" />
+		<hbox width="100%" horizontalAlign="right">
+			<button text="Cancel" id="dialogCancel" />
+			<spacer width="100%" />
+			<button text="OK" id="dialogOk" />
+		</hbox>
+	</vbox>
+</dialog>

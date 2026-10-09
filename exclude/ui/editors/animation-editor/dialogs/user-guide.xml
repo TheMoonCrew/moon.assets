@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="600" height="640" title="Animation Editor Guide">
+	<tabview width="100%" height="100%">
+		<box width="100%" text="Basics">
+			<label width="100%" text="The animation editor shows a character and lets you fix where each animation is drawn.\n\nPick a character on the left, then pick an animation. The Offset tab on the right has the X and Y of that animation. You can also drag the character with the left mouse button, or use the arrow keys (the step is set in the Offset tab). Pan with the middle mouse button or two fingers and zoom with the wheel or a pinch.\n\nThe Playback tab pauses the animation and steps it frame by frame, and changes its frame rate and loop. The Character tab edits the scale, flip, pixel art, dance and sing times and the starting animation. The View tab has the onion skin (a faint idle pose behind the character), the grid, the origin, the frame bounds and the camera focus point.\n\nEdit has tools that work on every animation: copy one offset to all of them, copy it to the opposite direction (left to right), mirror or shift them all. Everything can be undone.\n\nSave Character JSON writes the character data with your changes. Save to Mods Folder writes it into the first enabled mod as gameplay/characters/id.json, keeping a backup of the old file, so the game uses it. Check the Animations lists animations that look wrong, like a missing idle or a sing animation without a miss version." />
+		</box>
+		<box width="100%" text="Hotkeys">
+			<tableview width="100%" height="560" contentWidth="100%">
+				<header width="100%">
+					<column id="action" text="Action" width="55%" />
+					<column id="keybind" text="Keybind" width="45%" />
+				</header>
+				<data>
+					<item action="Spritesheet / animation mode" keybind="1 / 2" />
+					<item action="Previous / next animation" keybind="Q or [ / E or ]" />
+					<item action="Replay the animation" keybind="Enter" />
+					<item action="Play the idle animation" keybind="Space" />
+					<item action="Play a sing animation (Shift for miss)" keybind="W A S D" />
+					<item action="Play or pause" keybind="P" />
+					<item action="Previous / next frame" keybind="Comma / Period" />
+					<item action="Nudge the offset" keybind="Arrow keys (Ctrl 1, Shift 10)" />
+					<item action="Reset this offset" keybind="Backspace" />
+					<item action="Onion skin / flip" keybind="F / G" />
+					<item action="Undo / redo" keybind="Ctrl + Z / Ctrl + Y" />
+					<item action="Save the character / offsets" keybind="Ctrl + S / Ctrl + Shift + S" />
+					<item action="Reload from disk" keybind="Ctrl + R" />
+					<item action="Zoom / pan" keybind="Wheel / middle drag" />
+					<item action="Fit the character" keybind="Home" />
+					<item action="Hide the interface" keybind="H" />
+					<item action="Guide" keybind="F1" />
+					<item action="Leave" keybind="Esc or F4" />
+				</data>
+			</tableview>
+		</box>
+	</tabview>
+</dialog>

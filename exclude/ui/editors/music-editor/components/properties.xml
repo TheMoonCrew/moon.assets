@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<panel id="propertiesPanel" width="340" height="100%" text="Time change">
+	<scrollview width="100%" height="100%" contentWidth="100%">
+		<vbox width="100%">
+			<label id="propTitle" width="100%" text="Point 1 of 1" />
+
+			<LabeledRow text="Start (ms)">
+				<number-stepper id="propTime" pos="0" min="0" max="3600000" step="10" width="160" />
+			</LabeledRow>
+			<LabeledRow text="BPM">
+				<number-stepper id="propBpm" pos="100" min="1" max="999" step="1" precision="2" width="160" />
+			</LabeledRow>
+			<LabeledRow text="Beats per bar">
+				<number-stepper id="propNum" pos="4" min="1" max="32" step="1" width="160" />
+			</LabeledRow>
+			<LabeledRow text="Beat unit">
+				<dropdown id="propDen" width="160">
+					<data>
+						<item id="1" text="1 (whole)" />
+						<item id="2" text="2 (half)" />
+						<item id="4" text="4 (quarter)" />
+						<item id="8" text="8 (eighth)" />
+						<item id="16" text="16 (sixteenth)" />
+						<item id="32" text="32" />
+					</data>
+				</dropdown>
+			</LabeledRow>
+			<label id="propInfo" width="100%" text="" />
+
+			<hbox width="100%">
+				<button id="propPrevious" text="Previous" width="50%" />
+				<button id="propNext" text="Next" width="50%" />
+			</hbox>
+			<hbox width="100%">
+				<button id="propAdd" text="Add at playhead" width="50%" />
+				<button id="propDelete" text="Delete" width="50%" />
+			</hbox>
+			<hbox width="100%">
+				<button id="propHalve" text="BPM / 2" width="33%" />
+				<button id="propDouble" text="BPM x 2" width="33%" />
+				<button id="propTap" text="Tap" width="34%" />
+			</hbox>
+
+			<spacer height="8" />
+			<label width="100%" text="Loop" />
+			<hbox width="100%">
+				<button id="propLoopStart" text="Set start" width="50%" />
+				<button id="propLoopEnd" text="Set end" width="50%" />
+			</hbox>
+			<hbox width="100%">
+				<checkbox id="propLoopEnabled" text="Loop on" width="50%" />
+				<button id="propLoopClear" text="Clear" width="50%" />
+			</hbox>
+
+			<spacer height="8" />
+			<label width="100%" text="Playback" />
+			<LabeledRow text="Speed">
+				<dropdown id="propRate" width="160" selectedIndex="3">
+					<data>
+						<item id="0.25" text="x0.25" />
+						<item id="0.5" text="x0.5" />
+						<item id="0.75" text="x0.75" />
+						<item id="1" text="x1" />
+						<item id="1.25" text="x1.25" />
+						<item id="1.5" text="x1.5" />
+						<item id="2" text="x2" />
+					</data>
+				</dropdown>
+			</LabeledRow>
+
+			<spacer height="8" />
+			<label id="propHistory" width="100%" text="" />
+			<label id="propChecks" width="100%" text="" />
+		</vbox>
+	</scrollview>
+</panel>

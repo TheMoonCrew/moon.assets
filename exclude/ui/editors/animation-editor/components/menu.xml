@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menubar id="menubar" width="100%" paddingLeft="256">
+	<style>
+		.menu {
+		width: 250px;
+		}
+	</style>
+
+	<menu text="File" id="menubarMenuFile">
+		<menu-item id="menubarItemSave" text="Save Character JSON" shortcutText="Ctrl+S" />
+		<menu-item id="menubarItemSaveMod" text="Save to Mods Folder" />
+		<menu-item id="menubarItemCopyJson" text="Copy JSON" />
+		<menu-item id="menubarItemExportOffsets" text="Export Offsets (.txt)" shortcutText="Ctrl+Shift+S" />
+		<menu-separator />
+		<menu-item id="menubarItemReloadCharacter" text="Reload Character" shortcutText="Ctrl+R" />
+		<menu-separator />
+		<menu-item id="menubarItemExit" text="Exit" shortcutText="Esc" />
+	</menu>
+
+	<menu text="Edit">
+		<menu-item id="menubarItemUndo" text="Undo" shortcutText="Ctrl+Z" />
+		<menu-item id="menubarItemRedo" text="Redo" shortcutText="Ctrl+Y" />
+		<menu-separator />
+		<menu-item id="menubarItemResetOffset" text="Reset This Offset" shortcutText="Backspace" />
+		<menu-item id="menubarItemResetAll" text="Reset Every Offset" />
+		<menu-item id="menubarItemCopyAll" text="Copy This Offset to Every Animation" />
+		<menu-item id="menubarItemCopyPair" text="Copy to the Opposite Direction" />
+		<menu-item id="menubarItemMirrorAll" text="Mirror Every Offset" />
+		<menu-item id="menubarItemShiftAll" text="Shift Every Offset..." />
+	</menu>
+
+	<menu text="View">
+		<menu-item id="menubarItemSheetMode" text="Spritesheet Mode" shortcutText="1" />
+		<menu-item id="menubarItemAnimationMode" text="Animation Mode" shortcutText="2" />
+		<menu-separator />
+		<menu-item id="menubarItemOnion" text="Toggle Onion Skin" shortcutText="F" />
+		<menu-item id="menubarItemFlip" text="Flip Horizontally" shortcutText="G" />
+		<menu-item id="menubarItemGrid" text="Toggle Grid" />
+		<menu-separator />
+		<menu-item id="menubarItemFit" text="Fit the Character" shortcutText="Home" />
+		<menu-item id="menubarItemResetView" text="Reset View" />
+		<menu-item id="menubarItemHideUi" text="Hide the Interface" shortcutText="H" />
+	</menu>
+
+	<menu text="Animation">
+		<menu-item id="menubarItemPlayPause" text="Play or Pause" shortcutText="P" />
+		<menu-item id="menubarItemRestart" text="Replay" shortcutText="Enter" />
+		<menu-item id="menubarItemIdle" text="Play Idle" shortcutText="Space" />
+		<menu-separator />
+		<menu-item id="menubarItemPreviousAnimation" text="Previous Animation" shortcutText="Q" />
+		<menu-item id="menubarItemNextAnimation" text="Next Animation" shortcutText="E" />
+		<menu-item id="menubarItemPreviousFrame" text="Previous Frame" shortcutText="," />
+		<menu-item id="menubarItemNextFrame" text="Next Frame" shortcutText="." />
+		<menu-separator />
+		<menu-item id="menubarItemCheck" text="Check the Animations" />
+	</menu>
+
+	<menu text="Help">
+		<menu-item id="menubarItemGuide" text="User Guide" shortcutText="F1" />
+	</menu>
+</menubar>

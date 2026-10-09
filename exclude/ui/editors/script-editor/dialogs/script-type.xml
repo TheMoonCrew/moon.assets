@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="480" height="440" title="New Script - Choose a Type">
+	<vbox width="100%" height="100%" style="padding: 8px; spacing: 8px;">
+		<label text="What kind of script do you want to make?" width="100%" />
+		<listview id="typeList" width="100%" height="100%" />
+		<label id="typeDescription" text="" width="100%" />
+		<hbox width="100%" style="spacing: 8px;">
+			<button id="typeNext" text="Next" width="50%" />
+			<button id="typeCancel" text="Cancel" width="50%" />
+		</hbox>
+	</vbox>
+</dialog>

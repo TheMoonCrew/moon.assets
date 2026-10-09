@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vbox width="100%" height="100%">
+	<import source="components/menu.xml" />
+
+	<hbox width="100%" height="100%">
+		<vbox width="300" height="100%" style="padding: 4px; spacing: 4px; background-color: #20242B;">
+			<hbox width="100%" style="spacing: 4px;">
+				<dropdown id="rootPicker" width="100%" />
+				<button id="listUp" text="Up" width="56" />
+			</hbox>
+			<textfield id="pathInput" width="100%" />
+			<textfield id="listFilter" width="100%" placeholder="Filter" />
+			<listview id="fileList" width="100%" height="100%" />
+			<hbox width="100%" style="spacing: 4px;">
+				<button id="listOpen" text="Open" width="33%" />
+				<button id="listNewFile" text="New file" width="34%" />
+				<button id="listNewFolder" text="New folder" width="33%" />
+			</hbox>
+		</vbox>
+
+		<vbox width="100%" height="100%">
+			<hbox width="100%" style="padding: 4px; spacing: 6px; background-color: #2B2B2B;">
+				<label id="fileLabel" text="No file open" width="100%" verticalAlign="center" />
+				<button id="toolSave" text="Save" width="58" />
+				<button id="toolReload" text="Reload" width="68" />
+				<button id="toolCheck" text="Check" width="62" />
+				<button id="toolUndo" text="Undo" width="58" />
+				<button id="toolRedo" text="Redo" width="58" />
+				<button id="toolInfo" text="Info" width="64" />
+			</hbox>
+
+			<box id="editorArea" width="100%" height="64%" />
+
+			<hbox id="findBar" width="100%" hidden="true" style="padding: 4px; spacing: 6px; background-color: #2B2B2B;">
+				<textfield id="findInput" width="190" placeholder="Find" />
+				<textfield id="replaceInput" width="150" placeholder="Replace" />
+				<button id="findPreviousButton" text="Prev" width="52" />
+				<button id="findNextButton" text="Next" width="52" />
+				<button id="findReplaceButton" text="Replace" width="72" />
+				<button id="findReplaceAllButton" text="All" width="42" />
+				<checkbox id="findCaseBox" text="Aa" />
+				<label id="findInfo" text="" width="100%" verticalAlign="center" />
+				<textfield id="gotoInput" width="64" placeholder="Line" />
+				<button id="findCloseButton" text="X" width="32" />
+			</hbox>
+
+			<box id="consoleArea" width="100%" height="100%" />
+
+			<hbox width="100%" style="padding: 2px 8px; background-color: #1B1E24;">
+				<label id="statusLabel" text="" width="100%" />
+			</hbox>
+		</vbox>
+	</hbox>
+</vbox>

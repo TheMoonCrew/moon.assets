@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<box id="debugRoot" width="100%" height="100%">
+	<box id="debugDim" width="100%" height="100%" style="background-color: #05070B;" />
+
+	<vbox id="debugPanel" width="700" height="600" horizontalAlign="center" verticalAlign="center" style="padding: 0px; spacing: 0px; background-color: #14161A; border: 1px solid #3A404A; border-radius: 6px;">
+		<box id="debugAccent" width="100%" height="4" style="background-color: #00E676;" />
+
+		<vbox width="100%" height="100%" style="padding: 14px 18px; spacing: 10px;">
+			<hbox id="debugTitleRow" width="100%">
+				<label id="debugTitle" text="Debug Menu" style="font-size: 26px; color: #00E676;" />
+				<spacer width="100%" />
+				<label id="debugCount" text="" verticalAlign="center" style="color: #AAB2BF;" />
+			</hbox>
+
+			<textfield id="debugSearch" width="100%" placeholder="Type to search" />
+
+			<listview id="debugList" width="100%" height="100%" selectionMode="one-item">
+				<item-renderer width="100%" allowHover="true">
+					<hbox width="100%" style="padding: 7px 10px; spacing: 12px;">
+						<label id="title" width="220" style="font-size: 16px; color: #FFFFFF;" />
+						<label id="subtitle" width="100%" style="color: #AAB2BF;" />
+						<label id="tag" horizontalAlign="right" style="color: #00E676;" />
+					</hbox>
+				</item-renderer>
+				<data />
+			</listview>
+
+			<label id="debugHint" width="100%" text="Up and Down to pick, Enter to open, Esc to close" style="color: #6B7280;" />
+		</vbox>
+	</vbox>
+</box>

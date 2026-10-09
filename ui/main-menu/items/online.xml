@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="online.png">
+	<!-- Created with Adobe Animate version 21.0.9.42677 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="online idle0000" x="0" y="0" width="494" height="147"/>
+	<SubTexture name="online idle0001" x="0" y="0" width="494" height="147"/>
+	<SubTexture name="online idle0002" x="0" y="0" width="494" height="147"/>
+	<SubTexture name="online idle0003" x="494" y="0" width="494" height="147"/>
+	<SubTexture name="online idle0004" x="494" y="0" width="494" height="147"/>
+	<SubTexture name="online idle0005" x="494" y="0" width="494" height="147"/>
+	<SubTexture name="online idle0006" x="0" y="147" width="494" height="147"/>
+	<SubTexture name="online idle0007" x="0" y="147" width="494" height="147"/>
+	<SubTexture name="online idle0008" x="0" y="147" width="494" height="147"/>
+	<SubTexture name="online idle0009" x="0" y="147" width="494" height="147"/>
+	<SubTexture name="online selected0000" x="0" y="294" width="587" height="168" frameX="0" frameY="-1" frameWidth="587" frameHeight="169"/>
+	<SubTexture name="online selected0001" x="0" y="462" width="583" height="169" frameX="0" frameY="0" frameWidth="587" frameHeight="169"/>
+	<SubTexture name="online selected0002" x="0" y="631" width="586" height="167" frameX="0" frameY="-1" frameWidth="587" frameHeight="169"/>
+</TextureAtlas>

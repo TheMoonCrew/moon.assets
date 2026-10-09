@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<panel id="botPanel" width="340" height="100%" text="Lua Bot">
+	<vbox width="100%" height="100%" style="spacing: 4px;">
+		<scrollview id="botScroll" width="100%" height="100%" contentWidth="100%">
+			<vbox id="botLog" width="100%" style="spacing: 6px;" />
+		</scrollview>
+
+		<hbox width="100%">
+			<button id="botInsert" text="Insert" width="33%" disabled="true" />
+			<button id="botReplace" text="Replace" width="34%" disabled="true" />
+			<button id="botCopy" text="Copy" width="33%" disabled="true" />
+		</hbox>
+		<hbox width="100%">
+			<button id="botReview" text="Review script" width="50%" />
+			<button id="botExplain" text="Explain error" width="50%" />
+		</hbox>
+		<dropdown id="botRecipes" width="100%" text="Ideas" />
+		<textfield id="botInput" width="100%" placeholder="Describe what you want..." />
+		<hbox width="100%">
+			<button id="botSend" text="Send" width="50%" />
+			<button id="botClear" text="Clear chat" width="50%" />
+		</hbox>
+	</vbox>
+</panel>

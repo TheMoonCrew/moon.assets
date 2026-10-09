@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialog width="440" title="Name">
+	<vbox width="100%">
+		<label id="namePrompt" width="100%" text="Type a name." />
+		<textfield id="nameField" width="100%" />
+		<hbox width="100%" horizontalAlign="right">
+			<button text="Cancel" id="dialogCancel" />
+			<spacer width="100%" />
+			<button text="OK" id="dialogOk" />
+		</hbox>
+	</vbox>
+</dialog>

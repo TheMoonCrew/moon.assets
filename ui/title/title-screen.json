@@ -1,0 +1,62 @@
+{
+  "background": {"color": "#000000", "image": ""},
+  "music": {"track": "ui/main-menu/freaky-menu/freaky-menu", "fadeIn": 4.0},
+  "logo": {"enabled": true, "image": "ui/title/logo-bumpin", "prefix": "logo bumpin", "fps": 24, "x": -150, "y": -100, "cutoutX": 0.4, "scale": 1.0, "colorSwap": true},
+  "gf": {
+    "enabled": true,
+    "image": "ui/title/gf-dance-title",
+    "fps": 24,
+    "x": "40%",
+    "y": "7%",
+    "cutoutX": 0.4,
+    "scale": 1.0,
+    "colorSwap": true,
+    "left": {"prefix": "gfDance", "indices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+    "right": {"prefix": "gfDance", "indices": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]}
+  },
+  "enter": {
+    "enabled": true,
+    "type": "animate",
+    "image": "ui/title/title-screen-text",
+    "idle": "Idle",
+    "press": "Confirm",
+    "fps": 24,
+    "x": 100,
+    "y": "80%",
+    "cutoutX": 0.5,
+    "scale": 1.0,
+    "colorSwap": true
+  },
+  "intro": {
+    "delay": 1.0,
+    "flashColor": "#FFFFFF",
+    "flashDuration": 4.0,
+    "flashDurationRepeat": 1.0,
+    "textFile": "ui/title/intro-text",
+    "separator": "--",
+    "lines": [],
+    "firstLineY": 200,
+    "lineSpacing": 60,
+    "events": [
+      {"beat": 1, "action": "text", "lines": ["The", "Funkin Crew Inc"]},
+      {"beat": 3, "action": "add", "text": "presents"},
+      {"beat": 4, "action": "clear"},
+      {"beat": 5, "action": "text", "lines": ["In association", "with"]},
+      {"beat": 7, "action": "add", "text": "newgrounds"},
+      {"beat": 7, "action": "showLogo"},
+      {"beat": 8, "action": "clear"},
+      {"beat": 8, "action": "hideLogo"},
+      {"beat": 9, "action": "text", "lines": ["{wacky1}"]},
+      {"beat": 11, "action": "add", "text": "{wacky2}"},
+      {"beat": 12, "action": "clear"},
+      {"beat": 13, "action": "add", "text": "Friday"},
+      {"beat": 14, "action": "add", "text": "Night", "variants": {"trending": "Nigth"}},
+      {"beat": 15, "action": "add", "text": "Funkin"},
+      {"beat": 16, "action": "skip"}
+    ]
+  },
+  "newgrounds": {"enabled": true, "variants": true, "image": "ui/title/newgrounds-logo", "y": "52%", "scale": 0.8},
+  "confirm": {"sound": "ui/main-menu/confirm-menu", "volume": 0.7, "flashColor": "#FFFFFF", "flashDuration": 1.0, "delay": 2.0},
+  "secret": {"enabled": true, "track": "ui/title/girlfriends-ringtone/girlfriends-ringtone"},
+  "attract": {"enabled": true, "delay": -1}
+}
